@@ -1,8 +1,11 @@
 pclib
 =====
 
-common lib of python
-Under MIT License
+common lib and usefull tool collections of python, just for easy to start
+Under original License and MIT License
+
 
 Dependency:
 http://www.noah.org/wiki/pexpect
+http://bottlepy.org/
+https://github.com/ralphbean/ansi2html  (GPLv3)
