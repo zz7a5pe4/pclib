@@ -8,4 +8,4 @@ Under original License and MIT License
 Dependency:
 http://www.noah.org/wiki/pexpect
 http://bottlepy.org/
-https://github.com/ralphbean/ansi2html  (GPLv3)
+http://code.google.com/p/psutil/

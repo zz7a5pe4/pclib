@@ -36,3 +36,6 @@ nosetests.xml
 
 # dist
 MANIFEST
+
+
+tmp
