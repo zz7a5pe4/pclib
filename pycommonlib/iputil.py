@@ -2,6 +2,7 @@
 
 import commands
 import json
+import netifaces
 
 class theIP:
     iface=""
@@ -36,6 +37,29 @@ class theIP:
         d["brdcast"]=self.brdcast
         return json.dumps(d)
         
+def getipaddr(iface):
+    if not iface:
+        return ""
+    try:
+        ips = netifaces.ifaddresses(iface)[netifaces.AF_INET]
+        ret = [];
+        for i in ips:
+            ret.append(i["addr"])
+    except ValueError as e:
+        print "bad value"
+
+    return ret
+
+def getifaces():
+    return netifaces.interfaces()
+
+def getipaddres():
+    ret = {}
+    for i in netifaces.interfaces():
+        ret[i] = getipaddr(i)
+
+    return ret
+
 
 def main():
     i = theIP("eth0")
